@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/js/fullpage.css">
+    <style>
+        .section{
+            width: 80% !important;
+            float: right;
+            color: red;
+            text-align: center;
+        }
+        .nav{
+            width: 20%;
+            height: 100%;
+            position: fixed;
+            z-index: 1000;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav" id="header">
+        <a href="#slide1">satu</a>
+        <a href="#slide2">dua</a>
+        <a href="#slide3">tiga</a>
+        <a href="#slide4">empat</a>
+    </div>
+    <div id="fullpage">
+        <div class="section" data-anchor="slide1">satu</div>
+        <div class="section" data-anchor="slide2">dua</div>
+        <div class="section" data-anchor="slide3">tiga</div>
+        <div class="section" data-anchor="slide4">empat</div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="/js/fullpage.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                //options here
+                // autoScrolling:true,
+                continuousVertical: true,
+                fadingEffect: true,
+                keyboardScrolling:false,
+                afterLoad: function(origin, destination, dir){
+                    // console.log(dir)
+                    console.log(destination)
+                    
+                    $(window).click(function(){
+                        clearTimeout(ab);
+                        console.log('mandeg');
+                    })
+                    if (destination.isLast !== true) {
+                        var ab = setTimeout(function(a){
+                            $.fn.fullpage.moveSectionDown();
+                            // console.log(destination.isLast);
+                            console.log('lanjut')
+                        },2000);
+                    } else{
+                        setTimeout(function(){
+                            $.fn.fullpage.moveSectionDown();
+                        },60000);
+                    }
+                    $('a').click(function(){
+                        clearTimeout(ab);
+                        console.log('clear');
+                    })
+                },
+            });
+            
+
+        });
+    </script>
+</body>
+</html>
