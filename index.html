@@ -247,26 +247,26 @@
                 keyboardScrolling:false,
                 afterLoad: function(origin, destination, dir){
                     // console.log(dir)
-                    console.log(destination)
+                    // console.log(destination)
                     
-                    // if (destination.isLast !== true) {
-                    //     var ab = setTimeout(function(a){
-                    //         $.fn.fullpage.moveSectionDown();
-                    //         // console.log(destination.isLast);
-                    //         console.log('lanjut')
-                    //     },15000);
-                    // } else{
-                    //     var ab = setTimeout(function(){
-                    //         $.fn.fullpage.moveSectionDown();
-                    //     },60000);
-                    // }
+                    if (destination.isLast !== true) {
+                        var ab = setTimeout(function(a){
+                            $.fn.fullpage.moveSectionDown();
+                            // console.log(destination.isLast);
+                            console.log('lanjut')
+                        },15000);
+                    } else{
+                        var ab = setTimeout(function(){
+                            $.fn.fullpage.moveSectionDown();
+                        },60000);
+                    }
                     $(window).click(function(){
                         clearTimeout(ab);
-                        console.log('mandeg');
+                        // console.log('mandeg');
                     })
                     $('a').click(function(e){
                         clearTimeout(ab);
-                        console.log('clear');
+                        // console.log('clear');
                     })
                 },
             });
