@@ -1,35 +1,47 @@
-.sidebar{
-    min-height: 100vh;
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    position: relative; 
+}
+.nv{
+    flex-direction: column !important;
+}
+.navbar{
+    height: 100vh;
+    display: unset !important;
+    padding: 0 !important;
+    box-shadow: 0px 0px 10px black;
+}
+.nav-item{
+  height: 16.6666667vh;
+}
+.nav-link{
+    height: 100%;
+    padding: 0 !important;
+    line-height: 16.6666667vh;
+}
+.active{
+    color: black !important;
+    background: white !important;
 }
 .content{
     height: 100vh;
 }
-.nav-list{
-    height: 16.66666666667vh;
-    line-height: 16.66666666667vh;
-    border-bottom:1px solid white;
-}
-.nav-list a{
-    color: white;
-}
-.nav-list .text-item{
-    color: black;
-}
 .card-6{
     height: 43vh;
     margin: auto;
-    position: relative !important;
-    left: 50%;
-    transform: translateX(-50%);
 }
 .card-3{
     height: 33vh;
 }
 .card-12{
     height: 80vh;
-}
-.white{
-    background: white !important;
+    /* position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
 }
 .foot{
     height: 5vh;
@@ -39,13 +51,4 @@
     bottom: 0;
     right: 0;
     z-index: 9999999999;
-}
-.row>[class*=col-]{
-    margin-bottom: 0 !important;
-}
-.m-top,.m-down{
-    margin-top: 4vh !important;
-}
-.top-7{
-    margin-top: 7vh;
 }
