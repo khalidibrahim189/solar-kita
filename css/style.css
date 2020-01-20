@@ -14,7 +14,7 @@ body {
     display: unset !important;
     padding: 0 !important;
     box-shadow: 0px 0px 10px black;
-    background: #ffd44b;
+    background: #ffd44b !important;
 }
 .nav-item{
   height: 16.6666667vh;

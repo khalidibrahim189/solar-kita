@@ -195,11 +195,11 @@
                     if(destination.isLast !== true){
                         var ab = setTimeout(() => {
                             $.fn.fullpage.moveSectionDown();
-                        }, 3000);
+                        }, 15000);
                     }else{
                         var ab = setTimeout(()=>{
                             $.fn.fullpage.moveSectionDown();
-                        },10000)
+                        },60000)
                     }
                     $(window).click(function(){
                         clearTimeout(ab);
