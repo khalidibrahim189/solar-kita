@@ -15,13 +15,17 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2">
-                <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top col-lg-2">  
+                <nav class="navbar navbar-expand-sm navbar-dark fixed-top col-lg-2">  
                   <ul class="navbar-nav nv text-center">
                     <li class="nav-item border-bottom border-white">
-                        <a class="nav-link" href="#">JUDUL WEBYA</a>
+                        <a class="nav-link" href="#">LOGO</a>
                     </li>
                     <li class="nav-item border-bottom border-white">
-                      <a class="nav-link" data-menuanchor="section1" href="#section1">Section 1</a>
+                      <a class="nav-link" data-menuanchor="section1" href="#section1">
+                        <img src="/assets/ICON_LANDING PAGEE-05.png" alt="" class="img-active">
+                        <img src="/assets/ICON_LANDING PAGEE-01.png" alt="" class="img-none">
+                        <p>SUMMARY</p>
+                      </a>
                     </li>
                     <li class="nav-item border-bottom border-white">
                       <a class="nav-link" data-menuanchor="section2" href="#section2">Section 2</a>
@@ -186,25 +190,27 @@
                 anchors: ['section1', 'section2', 'section3', 'section4', 'section5'],
                 menu:'.navbar',
                 afterLoad: function(origin, destination, dir){
-                    // console.log(dir)
-                    // console.log(destination)
-                    // if(destination.isLast !== true){
-                    //     var ab = setTimeout(() => {
-                    //         $.fn.fullpage.moveSectionDown();
-                    //     }, 3000);
-                    // }else{
-                    //     var ab = setTimeout(()=>{
-                    //         $.fn.fullpage.moveSectionDown();
-                    //     },10000)
-                    // }
-                    // $(window).click(function(){
-                    //     clearTimeout(ab);
-                    //     // console.log('mandeg');
-                    // })
-                    // $('a').click(function(e){
-                    //     clearTimeout(ab);
-                    //     // console.log('clear');
-                    // })
+                    console.log(dir)
+                    console.log(destination)
+                    if(destination.isLast !== true){
+                        var ab = setTimeout(() => {
+                            $.fn.fullpage.moveSectionDown();
+                        }, 3000);
+                    }else{
+                        var ab = setTimeout(()=>{
+                            $.fn.fullpage.moveSectionDown();
+                        },10000)
+                    }
+                    $(window).click(function(){
+                        clearTimeout(ab);
+                        // console.log('mandeg');
+                    })
+                    $('a').click(function(e){
+                        clearTimeout(ab);
+                        // console.log('clear');
+                    })
+                    // var a = $('.nav-link').attr('class');
+                    // console.log(a)
                 },
             });
         })

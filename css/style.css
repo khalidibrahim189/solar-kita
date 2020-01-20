@@ -4,6 +4,7 @@ html{
 }
 body {
     position: relative; 
+    background: rgb(248,2448,248);
 }
 .nv{
     flex-direction: column !important;
@@ -13,6 +14,7 @@ body {
     display: unset !important;
     padding: 0 !important;
     box-shadow: 0px 0px 10px black;
+    background: #ffd44b;
 }
 .nav-item{
   height: 16.6666667vh;
@@ -51,4 +53,11 @@ body {
     bottom: 0;
     right: 0;
     z-index: 9999999999;
+}
+.img-active,.img-none{
+    width: 80%;
+    display: none;
+}
+.img-active{
+    display: none;
 }
